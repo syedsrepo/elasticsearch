@@ -1,0 +1,11 @@
+{ 
+    "type": "mongodb", 
+    "mongodb": { 
+      "db": "activate", 
+      "collection": "AuditLogNotSecured"
+    }, 
+    "index": {
+      "name": "audilognotsecuredindex", 
+      "type": "AuditLogNotSecured" 
+    }
+}
