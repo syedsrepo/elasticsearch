@@ -1,0 +1,10 @@
+view deatils of the cluster
+
+  196  curl -XGET "http://localhost:9200/_cat/health?v"
+  197  curl -XGET "http://localhost:9200/_cat/nodes?v"
+  198  curl -XGET "http://localhost:9200/_cat/indicies?v"
+  199  curl -XGET "http://localhost:9200/_cat/indices?v"
+  200  curl -XGET "http://localhost:9200/_cat/allocation?v"
+
+
+

@@ -3,7 +3,7 @@ import datetime
 
 myclient = pymongo.MongoClient("mongodb://localhost:27017/")
 mydb = myclient["activate"]
-mycol = mydb["AuditLogNonSecured"]
+mycol = mydb["AuditLogNotSecured"]
 
 startTime = datetime.datetime.utcnow().isoformat()
 endTime = datetime.datetime.utcnow().isoformat()
@@ -11,9 +11,9 @@ endTime = datetime.datetime.utcnow().isoformat()
 st  = mycol.count()
 print(st)
 
-for ctr in range(st, st + 500000):
+for ctr in range(st, st + 2):
     mydict = {
-        "className" : "com.calix.app.AuditLogNonSecured",
+        "className" : "com.calix.app.AuditLogNotSecured",
         "clientIP" : "127.0.0.1",
         "emsServerIP" : "172.23.51.109",
         "startTime" : startTime,
